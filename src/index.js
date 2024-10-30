@@ -9,7 +9,7 @@ import { weatherSearch } from "./lib/weather.js";
  */
 
 /**
- * Allar staðsetning sem hægt er að fá veður fyrir.
+ * Allar staðsetning sem hægt er að fá veður fyrir..
  * @type Array<SearchLocation>
  */
 const locations = [
@@ -214,6 +214,16 @@ function render(container, locations, onSearch, onSearchMyLocation) {
   heading.appendChild(document.createTextNode("Mega Ultra Veður Síðan!!!"));
   headerElement.appendChild(heading);
   parentElement.appendChild(headerElement);
+
+  const introElement = document.createElement("div");
+  const intro = document.createElement("p");
+  intro.appendChild(
+    document.createTextNode(
+      "Veldu staðsetningu og Ultra Mega Veður Síðan birtir veðurspánna!"
+    )
+  );
+  introElement.appendChild(intro);
+  parentElement.appendChild(introElement);
 
   const locationsElement = document.createElement("div");
   locationsElement.classList.add("locations");
